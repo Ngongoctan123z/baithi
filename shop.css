@@ -1,0 +1,205 @@
+body {
+    background-color: #121212;
+    color: #eaf5ed;
+    font-family: Arial, sans-serif;
+}
+
+.maintenance-bar {
+    background-color: #317405;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+.header {
+    background-color: #1c1c1c;
+    color: #1fc263;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 24px;
+    margin-right: 10px;
+    position: absolute; /* Chỉ định vị trí tuyệt đối */
+    left: 40px; /* Điều chỉnh vị trí sang trái */
+}
+
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #1c1c1c;
+    width: 200px;
+    position: fixed;
+    top: 100px; /* Dịch xuống phần header */
+    bottom: 0;
+    left: 0; /* Thay đổi từ -200px thành 0 */
+    transition: left 0.3s;
+    overflow-y: auto;
+    z-index: 2000; /* Đảm bảo sidebar hiển thị trên phần header */
+}
+
+.sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    position: relative; /* Để chứa phần 3 gạch qua bên trái */
+}
+
+.sidebar ul li:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 3px; /* Độ dày của đường gạch */
+    height: 20px; /* Chiều cao của đường gạch */
+    background-color: #fff; /* Màu của đường gạch */
+}
+.sidebar a {
+    color: #ffffff; /* Đặt màu chữ là màu trắng */
+    text-decoration: none; /* Loại bỏ gạch chân dưới */
+}
+
+.sidebar a:hover {
+    text-decoration: underline; /* Khi di chuột qua, hiển thị gạch chân dưới */
+}
+
+
+.content-container {
+    margin-left: 200px;
+    padding: 20px;
+    flex-grow: 1;
+    transition: margin-left 0.3s; /* Thêm hiệu ứng chuyển động cho phần nội dung */
+}
+
+.content {
+    display: none;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 15px;
+    width: calc(25 - 20px);
+    box-sizing: border-box;
+}
+
+.product img {
+    max-height: 150px;
+}
+
+.footer {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-left: -100px; 
+
+}
+
+.btn-danger {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+}
+
+.card-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-body ul li {
+    margin-bottom: 10px;
+}
+
+.card-body img {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.qr-code img {
+    max-width: 100%;
+    height: auto;
+    float: left;
+    color:#bbcec4
+}
+.deposit-info.right {
+    background-color: #1e1e1f;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #119b4b;
+    text-align: right;
+    position: fixed;
+    bottom: 100px;
+    right: px;
+    z-index: 1000; /* Đảm bảo hiển thị phía trên các phần khác nếu có */
+}
+
+
+.corner-text {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.rut-tien-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rut-tien-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+.rut-tien-form button {
+    background-color: #d32f2f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.rut-tien-form button:hover {
+    background-color: #b71c1c;
+}
